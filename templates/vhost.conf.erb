@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+  DocumentRoot "/var/www/vhosts/example"
+  ServerName example.com
+
+  <Directory "/var/www/vhosts/example">
+      Options Indexes FollowSymLinks
+      AllowOverride None
+      Require all granted
+  </Directory>
+
+  ErrorLog "/var/log/httpd/example_error.log"
+  CustomLog "/var/log/httpd/example_access.log" combined
+</VirtualHost>
